@@ -1,0 +1,19 @@
+.row {
+    color: white;
+}
+
+.card {
+    background-color: purple;
+}
+
+.card-body {
+    height: 500px;
+}
+
+#startButton {
+    padding-top: 200px;
+}
+
+#start {
+    width: 300px;
+}
