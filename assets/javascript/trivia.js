@@ -57,3 +57,31 @@ function checkTimeRemaining() {
         totalTimeouts++;
     }
 }
+
+function calculateTimeRemaining() {
+    timeRemaining--;
+    $('#time-remaining').text(`Time Remaining: ${timeRemaining}`);
+}
+
+function verifyAnswerChosen(answerClicked) {
+    if (listOfQuestions[questionId].finalAttr === answerClicked) {
+        displayAnswer(true, "CORRECT!");
+        totalWins++;
+    } else {
+        displayAnswer(false, "INCORRECT!");
+        totalLosses++;
+    }
+}
+
+function displayAnswer(isCorrect, resultText) {
+    stopTimer();
+    clearQuestion();
+    $('#question').text(`${resultText}`);
+    if (!isCorrect) {
+        $('#answer1').text(`The Correct Answer is: ${listOfQuestions[questionId].finalText}`);
+    }
+}
+
+function stopTimer() {
+    clearInterval(intervalId);
+}
