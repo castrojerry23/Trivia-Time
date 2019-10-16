@@ -85,3 +85,20 @@ function displayAnswer(isCorrect, resultText) {
 function stopTimer() {
     clearInterval(intervalId);
 }
+
+function clearQuestion() {
+    $('#question').empty();
+    $('#answer1').empty();
+    $('#answer2').empty();
+    $('#answer3').empty();
+    $('#answer4').empty();
+}
+
+function displayNextQuestion() {
+    questionId++;
+    if (questionId !== listOfQuestions.length) {
+        let timeoutId = setTimeout(startTrivia, 1000 * 2);
+    } else {
+        let timeoutId = setTimeout(displayStats, 1000 * 2);
+    }
+}
