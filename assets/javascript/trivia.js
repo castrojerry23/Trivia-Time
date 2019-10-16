@@ -121,3 +121,33 @@ function resetStats() {
     totalTimeouts = 0;
     $('#playAgain').addClass("invisible");
 }
+
+$('#start').on("click", function () {
+    $('#startButton').hide();
+    startTrivia();
+});
+
+$('#answer1').on("click", function () {
+    verifyAnswerChosen("answer1");
+    displayNextQuestion();
+});
+
+$('#answer2').on("click", function () {
+    verifyAnswerChosen("answer2");
+    displayNextQuestion();
+});
+
+$('#answer3').on("click", function () {
+    verifyAnswerChosen("answer3");
+    displayNextQuestion();
+});
+
+$('#answer4').on("click", function () {
+    verifyAnswerChosen("answer4");
+    displayNextQuestion();
+});
+
+$('#playAgain').on("click", function () {
+    resetStats();
+    startTrivia();
+});

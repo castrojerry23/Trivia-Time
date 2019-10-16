@@ -1,13 +1,13 @@
 .row {
-    color: white;
+    color: purple;
 }
 
 .card {
-    background-color: purple;
+    background-color: lightgray;
 }
 
 .card-body {
-    height: 500px;
+    height: 600px;
 }
 
 #startButton {
