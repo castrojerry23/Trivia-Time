@@ -40,3 +40,20 @@ function displayQuestion() {
     $('#answer3').text(listOfQuestions[questionId].answer3);
     $('#answer4').text(listOfQuestions[questionId].answer4);
 }
+
+function startTimer() {
+    timeRemaining = 20;
+    $('#time-remaining').text(`Time Remaining: ${timeRemaining}`);
+    intervalId = setInterval(checkTimeRemaining, 1000);
+}
+
+function checkTimeRemaining() {
+    if (timeRemaining > 1) {
+        calculateTimeRemaining();
+    } else {
+        calculateTimeRemaining();
+        displayAnswer(false, "OUT OF TIME!");
+        displayNextQuestion();
+        totalTimeouts++;
+    }
+}
