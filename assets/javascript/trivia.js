@@ -27,3 +27,16 @@ let timeRemaining = 20;
 let totalWins = 0;
 let totalLosses = 0;
 let totalTimeouts = 0;
+
+function startTrivia() {
+    displayQuestion();
+    startTimer();
+}
+
+function displayQuestion() {
+    $('#question').text(listOfQuestions[questionId].question);
+    $('#answer1').text(listOfQuestions[questionId].answer1);
+    $('#answer2').text(listOfQuestions[questionId].answer2);
+    $('#answer3').text(listOfQuestions[questionId].answer3);
+    $('#answer4').text(listOfQuestions[questionId].answer4);
+}
