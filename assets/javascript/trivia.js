@@ -21,3 +21,9 @@ const listOfQuestions = [
     {question: "What fictional character does Rachel dress up as to impress Ross?", answer1: "Princess Leia", answer2: "Xena", answer3: "Wonder Woman", answer4: "Lara Croft", finalAttr: "answer1", finalText: "Princess Leia!"}
 ]
 
+let intervalId = 0;
+let questionId = 0;
+let timeRemaining = 20;
+let totalWins = 0;
+let totalLosses = 0;
+let totalTimeouts = 0;
