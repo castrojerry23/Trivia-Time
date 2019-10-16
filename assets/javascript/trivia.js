@@ -52,7 +52,7 @@ function checkTimeRemaining() {
         calculateTimeRemaining();
     } else {
         calculateTimeRemaining();
-        displayAnswer(false, "OUT OF TIME!");
+        displayAnswer(false, "TIME IS UP!");
         displayNextQuestion();
         totalTimeouts++;
     }
