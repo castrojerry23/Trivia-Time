@@ -102,3 +102,22 @@ function displayNextQuestion() {
         let timeoutId = setTimeout(displayStats, 1000 * 2);
     }
 }
+
+function displayStats() {
+    $('#question').text("Finished! Here's your final score");
+    $('#answer1').text(`Correct Answers: ${totalWins}`);
+    $('#answer2').text(`Wrong Answers: ${totalLosses}`);
+    $('#answer3').text(`Unanswered Questions: ${totalTimeouts}`);
+    $('#answer4').empty();
+    $('#playAgain').removeClass("invisible");
+}
+
+function resetStats() {
+    intervalId = 0;
+    questionId = 0;
+    timeRemaining = 20;
+    totalWins = 0;
+    totalLosses = 0;
+    totalTimeouts = 0;
+    $('#playAgain').addClass("invisible");
+}
